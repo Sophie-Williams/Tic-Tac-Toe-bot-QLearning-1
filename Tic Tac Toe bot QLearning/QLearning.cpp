@@ -68,7 +68,7 @@ void QLearning::update()
 		int currState = mStateID[mStates[i]];
 		int currAction = mActions[i];
 		int resultState = mStateID[mStates[i - 1]];
-		int reward = mRewards[i];
+		int reward = mRewards[i - 1];
 
 		double resultReward = -DBL_MAX;
 

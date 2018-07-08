@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main()
+/*int main()
 {
 	TicTacToe game;
 
@@ -40,4 +40,4 @@ int main()
 		cin.ignore();
 		cin.ignore();
 	}
-}
+}*/

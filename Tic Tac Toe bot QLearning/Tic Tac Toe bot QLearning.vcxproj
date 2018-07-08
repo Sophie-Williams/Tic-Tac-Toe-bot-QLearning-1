@@ -121,6 +121,8 @@
     <ClInclude Include="TicTacToe.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CpuVsRand.cpp" />
+    <ClCompile Include="CpuVsUser.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="QLearning.cpp" />
