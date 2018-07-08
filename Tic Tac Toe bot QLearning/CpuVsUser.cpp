@@ -5,7 +5,7 @@
 
 using namespace std;
 
-TicTacToe game;
+/*TicTacToe game;
 QLearning bot(.5, .8);
 
 string path = "File\\Text\\QValue.txt";
@@ -71,4 +71,4 @@ int main()
 		bot.update();
 		bot.saveQValue(path);
 	}
-}
+}*/
