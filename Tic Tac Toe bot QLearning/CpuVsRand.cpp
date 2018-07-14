@@ -3,6 +3,7 @@
 #include "TicTacToe.h"
 #include "QLearning.h"
 #include "Random.h"
+#include "FileIO.h"
 
 using namespace std;
 
@@ -10,11 +11,12 @@ TicTacToe game;
 QLearning QBot(.5, .8);
 Random RBot;
 
-string path = "File\\Text\\QValue.txt";
+string QPath = "File\\Text\\QValue.txt";
+string SPath = "File\\Text\\score cpuVSrand.txt";
 
 int main()
 {
-	QBot.readQValue(path);
+	QBot.readQValue(QPath);
 
 	int n, pos, win = 0, lose = 0, tie = 0;
 	cout << "Enter no of trial: ";
@@ -61,10 +63,12 @@ int main()
 			QBot.addReward(-1);
 			tie++;
 		}
+
 		QBot.update();
+		FileIO::saveScore(SPath, game.getWinner());
 	}
 
-	QBot.saveQValue(path);
+	QBot.saveQValue(QPath);
 	cin.ignore();
 	cin.ignore();
 }

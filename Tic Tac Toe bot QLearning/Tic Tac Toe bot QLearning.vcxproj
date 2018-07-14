@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="FileIO.h" />
     <ClInclude Include="Helper.h" />
     <ClInclude Include="QLearning.h" />
     <ClInclude Include="Random.h" />
@@ -123,6 +124,7 @@
   <ItemGroup>
     <ClCompile Include="CpuVsRand.cpp" />
     <ClCompile Include="CpuVsUser.cpp" />
+    <ClCompile Include="FileIO.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Helper.cpp" />
     <ClCompile Include="QLearning.cpp" />
