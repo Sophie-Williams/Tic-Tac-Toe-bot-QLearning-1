@@ -14,6 +14,8 @@ Random RBot;
 string QPath = "File\\Text\\QValue.txt";
 string SPath = "File\\Text\\score cpuVSrand.txt";
 
+vector<int> scores;
+
 int main()
 {
 	QBot.readQValue(QPath);
@@ -65,10 +67,16 @@ int main()
 		}
 
 		QBot.update();
-		FileIO::saveScore(SPath, game.getWinner());
+		scores.push_back(game.getWinner());
 	}
 
 	QBot.saveQValue(QPath);
+
+	for (int i = 0; i < scores.size(); i++)
+	{
+		FileIO::saveScore(SPath, scores[i]);
+	}
+
 	cin.ignore();
 	cin.ignore();
 }
